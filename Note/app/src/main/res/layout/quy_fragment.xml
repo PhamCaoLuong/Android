@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:padding="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiền Quỹ"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            />
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200k"
+            android:textColor="#35FD35"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/balance_detail"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#03A9F4"
+        android:padding="10dp"
+        android:weightSum="5">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thành viên"
+            android:layout_weight="4"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/add_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/member_detail_recyclerview">
+
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#03A9F4"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:weightSum="5">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đóng tiền"
+            android:layout_weight="4"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/add_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/money_detail_recyclerview">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

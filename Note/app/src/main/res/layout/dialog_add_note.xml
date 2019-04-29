@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Note"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:paddingBottom="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Địa điểm"
+            />
+        <EditText
+            android:id="@+id/place_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bạn đi đâu"
+            android:inputType="textCapWords"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Số người"/>
+
+        <EditText
+            android:id="@+id/member_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Bạn đi mấy người"/>
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Từ ngày"
+            />
+
+        <EditText
+            android:id="@+id/start_day_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="DD/MM/YYYY"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Đến ngày"/>
+        <EditText
+            android:id="@+id/end_day_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="DD/MM/YYYY"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        >
+        <Button
+            android:id="@+id/them_note_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tạo note"
+            android:layout_weight="1"
+            android:background="@drawable/background_ok_btn"
+            android:textColor="#ffffff"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <Button
+            android:id="@+id/huy_bnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thôi đừng"
+            android:layout_weight="1"
+            android:background="@drawable/background_delete_bnt"
+            android:textColor="#ffffff"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

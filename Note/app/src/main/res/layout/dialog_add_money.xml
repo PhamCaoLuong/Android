@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Góp tiền"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:paddingBottom="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Tên"
+            />
+        <AutoCompleteTextView
+            android:id="@+id/name_money_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên thành viên đóng tiền"
+            android:inputType="text"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Số tiền"/>
+
+        <EditText
+            android:id="@+id/money_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Ví dụ 50k"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        >
+        <Button
+            android:id="@+id/dong_tien_bnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận"
+            android:layout_weight="1"
+            android:background="@drawable/background_ok_btn"
+            android:textColor="#ffffff"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <Button
+            android:id="@+id/huy_bnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:layout_weight="1"
+            android:background="@drawable/background_delete_bnt"
+            android:textColor="#ffffff"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
