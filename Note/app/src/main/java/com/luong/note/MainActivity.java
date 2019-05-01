@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
             if (noteAdapter != null) {
                 noteAdapter.notifyItemRangeChanged(0, items);
             }
+            databaseHelper.deleteData("note", "1 = 1");
             return true;
         }
 
@@ -211,6 +212,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
                     arrayList.get(currentIndex).setCost(Integer.parseInt(c.getString(costIndex)));
                     noteAdapter.notifyItemChanged(currentIndex);
                 }
+
             } catch (Exception e) {
                 Log.i("in get cost onResum", "can't get data");
                 e.printStackTrace();

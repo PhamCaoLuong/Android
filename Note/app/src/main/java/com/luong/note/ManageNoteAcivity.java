@@ -15,7 +15,7 @@ public class ManageNoteAcivity extends AppCompatActivity {
     String idNote;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
@@ -37,7 +37,7 @@ public class ManageNoteAcivity extends AppCompatActivity {
         mua.setArguments(bundle);
         mua.setContext(this);
 
-        FragmentTong tong = new FragmentTong();
+        final FragmentTong tong = new FragmentTong();
         tong.setArguments(bundle);
         tong.setContext(this);
 
@@ -47,6 +47,30 @@ public class ManageNoteAcivity extends AppCompatActivity {
 
         viewPager.setAdapter(viewPageAdapter);
         tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+                if (tab.getPosition() == 2) {
+                    if(tong.view != null) {
+                        tong.onResume();
+                    }
+
+                }
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
 
     }

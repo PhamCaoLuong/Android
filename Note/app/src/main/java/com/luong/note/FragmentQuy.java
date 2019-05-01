@@ -61,6 +61,8 @@ public class FragmentQuy extends Fragment implements ItemClickListener{
         arrayMoney = new ArrayList<>();
         databaseHelper = new DatabaseHelper(context);
 
+        totalMoney = 0;
+
 
         totalTextView = view.findViewById(R.id.balance_detail);
         add_member = view.findViewById(R.id.add_member);
@@ -307,16 +309,27 @@ public class FragmentQuy extends Fragment implements ItemClickListener{
     }
 
     private void addMember(String nameMember) {
-        Object []oj = new Object[3];
+        Object []oj = new Object[2];
         oj[0] = id;
         oj[1] = nameMember;
         boolean insertDB =  databaseHelper.addData("member_note", oj);
+
         if(insertDB) {
             Log.i("insert member", "insert successful");
         }
 
+        Object []oj2 = new Object[3];
+        oj2[0] = id;
+        oj2[1] = nameMember;
+        oj2[2] = "0";
+
+        databaseHelper.addData("money_member_note", oj2);
+
         arrayMember.add(new String[]{id, nameMember});
+        arrayMoney.add(new String[]{(String) oj2[0], (String) oj2[1], (String) oj2[2]});
+
         memberAdapter.notifyItemInserted(arrayMember.size() - 1);
+        moneyAdapter.notifyItemInserted(arrayMoney.size() - 1);
     }
 
     @Override
@@ -354,3 +367,4 @@ public class FragmentQuy extends Fragment implements ItemClickListener{
         totalTextView.setText(numberAsString + "k");
     }
 }
+
